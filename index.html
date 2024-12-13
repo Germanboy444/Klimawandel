@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimawandel</title>
+    <style>
+        :root {
+            --background-color: #f2f4f7;
+            --primary-color: #fff; /* Light blue accent */
+            --border-color: #90caf9; /* Slightly darker blue */
+            --text-color: #000;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 10%; /* Adjust position vertically */
+            left: 5%; /* Adjust position horizontally */
+            width: 20vw; /* Adjust width as necessary */
+            height: 80vh; /* Ensure the div touches the top and bottom of the screen */
+            background-color: var(--primary-color);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .navbar h1 {
+            font-size: 2vw; /* Scalable font size */
+            text-align: center;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-top: 5px;
+            padding-right: 10px; /* Add space for the scrollbar */
+            overflow-y: auto; /* Makes navbar scrollable */
+        }
+
+        /* Style the scrollbar */
+        .navbar::-webkit-scrollbar {
+            width: 8px;
+            background-color: #f0f0f0;
+        }
+
+        .navbar::-webkit-scrollbar-thumb {
+            background-color: #90a4ae;
+            border-radius: 5px;
+        }
+
+        .navbar li {
+            margin: 6px 0; /* Slightly smaller margin between the main points */
+            font-size: 1.2vw;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .navbar li:hover {
+            background-color: #90a4ae;
+            cursor: pointer;
+        }
+
+        .main {
+            margin-left: 30vw; /* Create space for the fixed side div */
+            position: relative;
+            width: 55vw;
+            height: 1000vh; /* Allow scrolling */
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            overflow: hidden;
+            margin-top: calc((100vh - 80vh) / 2); /* Align vertically with the side div */
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .main h2 {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        .main ul {
+            list-style: none;
+            padding-left: 2vh;
+        }
+
+        .main li {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Add spacing for the li elements directly under the first ul */
+        .navbar > ul > li {
+            margin-bottom: 15px; /* Add space between main points */
+        }
+
+        /* Reduce the space between the sublist items */
+        .main .sublist {
+            margin-top: 5px;
+            margin-left: 20px; /* More indented for subpoints */
+        }
+
+        .main .sublist li {
+            font-size: 1rem;
+            margin-top: 2px; /* Smaller space between subpoints */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Gliederung</h1>
+        <ul>
+            <li>1. Einführung</li>
+            <li>2. Ursachen des Klimawandels
+                <ul class="sublist">
+                    <li>2.1. Anthropogene Ursachen</li>
+                    <li>2.2. Natürliche Ursachen</li>
+                </ul>
+            </li>
+            <li>3. Auswirkungen des Klimawandels
+                <ul class="sublist">
+                    <li>3.1. Temperaturerhöhung</li>
+                    <li>3.2. Anstieg des Meeresspiegels</li>
+                    <li>3.3. Häufigere Extremwetterereignisse</li>
+                </ul>
+            </li>
+            <li>4. Lösungsansätze
+                <ul class="sublist">
+                    <li>4.1. Erneuerbare Energien</li>
+                    <li>4.2. Reduktion des CO2-Ausstoßes</li>
+                    <li>4.3. Anpassungsstrategien</li>
+                </ul>
+            </li>
+            <li>5. Fazit</li>
+        </ul>
+    </nav>
+    <div class="main">
+        <h2>Klimawandel</h2>
+        <p>Der Klimawandel stellt eine der größten Herausforderungen unserer Zeit dar. Er beeinflusst nicht nur das Klima, sondern auch die gesamte Umwelt, die Gesellschaft und die Wirtschaft. In dieser Gliederung werden die Ursachen, Auswirkungen und Lösungsansätze des Klimawandels behandelt.</p>
+    </div>
+</body>
+</html>
