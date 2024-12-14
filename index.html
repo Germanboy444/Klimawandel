@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimawandel</title>
+    <style>
+        :root {
+            --primary-color: #fff;
+            --border-color: #90caf9;
+            --text-color: #000;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #00000094;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            position: relative;
+            margin: 0;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/imgs/background.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px); /* Verwisch-Effekt */
+            opacity: 0.9; /* Halbtransparenz */
+            z-index: -1; /* Im Hintergrund */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 10%;
+            left: 5%;
+            width: 20vw;
+            height: 80vh;
+            background-color: var(--primary-color);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .navbar h1 {
+            font-size: 2vw;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-top: 5px;
+            padding-right: 10px;
+            overflow-y: auto;
+        }
+
+        .navbar::-webkit-scrollbar {
+            width: 8px;
+            background-color: #f0f0f0;
+        }
+
+        .navbar::-webkit-scrollbar-thumb {
+            background-color: #90a4ae;
+            border-radius: 5px;
+        }
+
+        .navbar li {
+            margin: 6px 0;
+            font-size: 1.2vw;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .navbar li:hover {
+            background-color: #90a4ae;
+            cursor: pointer;
+        }
+
+        .main {
+            margin-left: 30vw;
+            width: 55vw;
+            margin-top: 10vh;
+        }
+
+        .main > div {
+            background-color: var(--primary-color);
+            border-radius: 15px;
+            margin-bottom: 5vh; /* Standard-Abstand zwischen Abschnitten */
+            padding: 20px;
+            box-shadow: 0 2px 8px var(--shadow-color);
+        }
+
+        .title-div {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 10vh !important; /* !important hinzufügen, um sicherzustellen, dass diese Regel angewendet wird */
+        }
+
+
+        .title-div img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .title-div h2 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .definition-div p,
+        .content-div p {
+            height: 50vh;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .definition-div h3,
+        .content-div h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Gliederung</h1>
+        <ul>
+            <li>1. Einführung</li>
+            <li>2. Ursachen des Klimawandels
+                <ul class="sublist">
+                    <li>2.1. Anthropogene Ursachen</li>
+                    <li>2.2. Natürliche Ursachen</li>
+                </ul>
+            </li>
+            <li>3. Auswirkungen des Klimawandels
+                <ul class="sublist">
+                    <li>3.1. Temperaturerhöhung</li>
+                    <li>3.2. Anstieg des Meeresspiegels</li>
+                    <li>3.3. Häufigere Extremwetterereignisse</li>
+                </ul>
+            </li>
+            <li>4. Lösungsansätze
+                <ul class="sublist">
+                    <li>4.1. Erneuerbare Energien</li>
+                    <li>4.2. Reduktion des CO2-Ausstoßes</li>
+                    <li>4.3. Anpassungsstrategien</li>
+                </ul>
+            </li>
+            <li>5. Fazit</li>
+        </ul>
+    </nav>
+    <div class="main">
+        <!-- Titel mit Bild -->
+        <div class="title-div">
+            <img src="assets/imgs/earth.jpg" alt="Erde">
+            <h2>Klimawandel</h2>
+        </div>
+        <!-- Definition -->
+        <div class="definition-div">
+            <h3>Definition</h3>
+            <p>Der Klimawandel bezeichnet langfristige Veränderungen der globalen Klimabedingungen, die sowohl durch natürliche Prozesse als auch durch menschliche Aktivitäten verursacht werden können.</p>
+        </div>
+        <!-- Inhalt -->
+        <div class="content-div">
+            <h3>Inhalt</h3>
+            <p>In dieser Arbeit werden die Ursachen des Klimawandels, seine Auswirkungen und mögliche Lösungsansätze detailliert besprochen.</p>
+        </div>
+    </div>
+</body>
+</html>
