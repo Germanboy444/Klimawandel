@@ -1,0 +1,36 @@
+:root {
+    --primary-color: rgba(255, 255, 255, 0.555); /* Halbtransparenter weißer Hintergrund */
+    --border-color: #90caf9;
+    --text-color: #000;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #00000094;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/imgs/background.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* Verwisch-Effekt */
+    opacity: 0.9; /* Halbtransparenz */
+    z-index: -1; /* Im Hintergrund */
+}
