@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto; /* Scrollbar aktivieren */
+    overflow-y: auto; /* Vertikal scrollen */
     scrollbar-color: rgba(144, 164, 174, 0.6) rgba(255, 255, 255, 0.164); /* Firefox-Scrollbar */
     scrollbar-width: thin; /* Schmale Scrollbar (Firefox) */
 }
@@ -36,17 +36,67 @@
     list-style: none;
     margin-top: 5px;
     padding-right: 10px;
-    overflow-y: auto;
+    padding-left: 0;
 }
 
 .navbar li {
     margin: 6px 0;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
+    font-weight: bold; /* Schrift fett machen */
     padding: 5px;
     border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Flexbox für vertikale Ausrichtung der Zahl und des Textes */
+    transition: transform 0.3s ease, color 0.3s ease; /* Sanfter Zoom-Effekt und Farbänderung */
+}
+
+.navbar li .number {
+    margin-right: 10px; /* Abstand zwischen Zahl und Text */
+    font-weight: bold;
+    min-width: 2.5em; /* Stellt sicher, dass der Abstand immer gleich bleibt */
+}
+
+.navbar li p {
+    margin: 0; /* Entfernt den Abstand oben und unten beim Text */
+    white-space: normal; /* Erlaubt den Textumbruch */
+    word-wrap: break-word; /* Textbrüche bei langen Wörtern */
 }
 
 .navbar li:hover {
-    background-color: #90a4ae;
-    cursor: pointer;
+    transform: scale(1.05); /* Nur das hovernde Element wird leicht größer */
+    color: #303030; /* Farbänderung beim Hover */
+}
+
+.sublist {
+    list-style: none;
+    padding-left: 20px; /* Unterpunkte leicht einrücken */
+    margin-top: 5px;
+}
+
+.sublist li {
+    font-size: 1.05vw;
+    font-weight: bold;
+    padding: 5px;
+    margin: 4px 0;
+    transition: transform 0.3s ease, color 0.3s ease; /* Sanfter Zoom-Effekt und Farbänderung */
+    display: flex;
+    flex-direction: column; /* Flexbox für vertikale Ausrichtung der Zahl und des Textes bei Unterpunkten */
+    align-items: flex-start; /* Stellt sicher, dass die Unterpunkte korrekt ausgerichtet sind */
+}
+
+.sublist li .number {
+    margin-right: 10px; /* Abstand zwischen Zahl und Text bei Unterpunkten */
+    font-weight: bold;
+    min-width: 2.5em; /* Stellt sicher, dass der Abstand immer gleich bleibt */
+}
+
+.sublist li:hover {
+    transform: scale(1.05); /* Nur das hovernde Element wird leicht größer */
+    color: #303030; /* Farbänderung beim Hover */
+}
+
+/* Dreieck (Pfeil) bei den Listenelementen entfernen */
+.navbar li::before, .sublist li::before {
+    display: none; /* Entfernt das Dreieck */
 }
